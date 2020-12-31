@@ -3,6 +3,7 @@ package zc.collection;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.Objects;
 
 public class IteratorTest {
     public void test1(){
@@ -22,6 +23,30 @@ public class IteratorTest {
 //        while(collection.iterator().hasNext()){
 //            System.out.println(collection.iterator().next());
 //        }
+
+        //移除元素 remove()方法
+        Iterator iterator1=collection.iterator();
+        while(iterator1.hasNext()){
+            Object obj= iterator1.next();
+            if(obj.equals("Tom")){
+                iterator1.remove();
+            }
+        }
+
+        //使用for遍历  for(集合元素类型 局部变量：集合对象)
+        for(Object obj:collection){
+            System.out.println(obj);
+        }
+
+        //普通for循环 这样操作s中的元素会变
+        String[] s=new String[]{"mm","mm","mm"};
+        for (int i = 0; i < s.length; i++) {
+            s[i]="gg";
+        }
+        //增强for循环 这样操作s中的元素不会变
+        for(String i:s){
+            i="gg";
+        }
     }
 
     public static void main(String[] args) {

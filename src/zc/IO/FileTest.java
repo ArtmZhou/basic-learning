@@ -24,7 +24,7 @@ public class FileTest {
      * */
     public void test1(){
         //方式一的相对路径创建
-        File file=new File("helloworld.txt");//相对于当前module
+        File file=new File("helloworld.txt");//相对于当前module,如果是写在main方法下，则是相较于当前工程下
     }
 
     public void test2(){

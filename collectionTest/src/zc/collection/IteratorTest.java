@@ -39,9 +39,11 @@ public class IteratorTest {
         }
 
         //普通for循环 这样操作s中的元素会变
+        System.out.println("-----------round 1-----------");
         String[] s=new String[]{"mm","mm","mm"};
         for (int i = 0; i < s.length; i++) {
             s[i]="gg";
+            System.out.println(s[i]);
         }
         //增强for循环 这样操作s中的元素不会变
         for(String i:s){
@@ -54,7 +56,7 @@ public class IteratorTest {
     }
 }
 
-class Person{
+class Person implements Comparable{
     private String name;
     private int age;
 
@@ -74,5 +76,15 @@ class Person{
     @Override
     public String toString() {
         return "name:"+name+" age:"+age;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if(o instanceof Person){
+            Person p=(Person)o;
+            return this.name.compareTo(p.name);
+        }else{
+            throw new RuntimeException();
+        }
     }
 }

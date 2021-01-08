@@ -4,6 +4,7 @@ import java.util.Comparator;
 import java.util.Map;
 import java.util.TreeMap;
 
+
 public class ComparatorTest {
         public static void main(String[] args) {
 //        Map<StudentTree,Integer>map=new TreeMap<>(new Comparator<StudentTree>() {
@@ -49,6 +50,7 @@ class StudentTree {
     }
 }
 
+//自定义排序，实现Comparator接口
 class StudentByName implements Comparator<StudentTree> {
     @Override
     public int compare(StudentTree o1, StudentTree o2) {

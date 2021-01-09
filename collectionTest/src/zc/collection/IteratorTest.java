@@ -45,7 +45,7 @@ public class IteratorTest {
             s[i]="gg";
             System.out.println(s[i]);
         }
-        //增强for循环 这样操作s中的元素不会变
+        //增强for循环 这样操作s中的元素不会变，增强操作一般用于遍历，不要用在修改上
         for(String i:s){
             i="gg";
         }

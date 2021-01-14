@@ -1,5 +1,13 @@
 package zc.LearningThread;
 
+/**
+ * 必须是函数式接口，才能用lambda表达式
+ *
+ * ()->{}
+ * ()是形参列表
+ * ->是lambda操作符
+ * {}是方法体
+ * */
 public class TestLambda {
 
     //3.静态内部类
